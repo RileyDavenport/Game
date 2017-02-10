@@ -3,6 +3,8 @@
 # http://inventwithpython.com/pygame
 # Released under a "Simplified BSD" license
 
+# Edited by Riley Davenport
+
 """
 This program has "gem data structures", which are basically dictionaries
 with the following keys:
@@ -28,7 +30,7 @@ GEMIMAGESIZE = 32 # width & height of each space in pixels
 
 # NUMGEMIMAGES is the number of gem types. You will need .png image
 # files named gem0.png, gem1.png, etc. up to gem(N-1).png.
-NUMGEMIMAGES = 7
+NUMGEMIMAGES = 5
 assert NUMGEMIMAGES >= 5 # game needs at least 5 types of gems to work
 
 # NUMMATCHSOUNDS is the number of different sounds to choose from when
@@ -79,7 +81,7 @@ def main():
     # Load the images
     GEMIMAGES = []
     for i in range(1, NUMGEMIMAGES+1):
-        gemImage = pygame.image.load('gem%s.png' % i)
+        gemImage = pygame.image.load('trump%s.png' % i)
         if gemImage.get_size() != (GEMIMAGESIZE, GEMIMAGESIZE):
             gemImage = pygame.transform.smoothscale(gemImage, (GEMIMAGESIZE, GEMIMAGESIZE))
         GEMIMAGES.append(gemImage)
